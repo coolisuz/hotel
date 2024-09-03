@@ -1,9 +1,10 @@
-import styled from "styled-components";
-import { formatCurrency } from "../../utils/helpers";
 import { useState } from "react";
+import styled from "styled-components";
+import { HiSquare2Stack, HiTrash, HiPencil } from "react-icons/hi2";
+
+import { formatCurrency } from "../../utils/helpers";
 import CreateCabinForm from "./CreateCabinForm";
 import { useDeleteCabin } from "./useDeleteCabinHook";
-import { HiSquare2Stack, HiTrash, HiPencil } from "react-icons/hi2";
 import { useCreateCabin } from "./useCreateCabinHook";
 
 const TableRow = styled.div`
@@ -90,7 +91,7 @@ function CabinRow({ cabin }) {
           <span>&mdash;</span>
         )}
         <ActionsContainer>
-          <button disabled={isDeleting} onClick={handleDuplicate}>
+          <button disabled={isCreating} onClick={handleDuplicate}>
             <HiSquare2Stack />
           </button>
           <button disabled={isDeleting} onClick={() => deleteCabin(cabinId)}>
