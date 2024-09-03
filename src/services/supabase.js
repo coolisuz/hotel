@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-const supabaseUrl = "https://incogpgzbhyjkwqaioof.supabase.co";
+export const supabaseUrl = "https://incogpgzbhyjkwqaioof.supabase.co";
 
 // ok to expose, row level policy is turned on
 const supabaseKey =
